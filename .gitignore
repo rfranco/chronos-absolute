@@ -1,0 +1,20 @@
+
+# Subversion
+.svn
+
+# OS X
+.DS_Store
+
+# Build and Release Folders
+bin-debug/
+bin-release/
+target/
+launch/
+
+# Project property files
+.settings
+.project
+.actionScriptProperties
+.flexConfig.xml
+.flexLibProperties
+.flexProperties

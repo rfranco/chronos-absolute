@@ -6,6 +6,6 @@ package suite
 	[RunWith("org.flexunit.runners.Suite")]
 	public class SuiteChronos
 	{
-		public var chronos:SuiteAbsolute;
+		public var absolute:SuiteAbsolute;
 	}
 }

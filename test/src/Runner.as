@@ -1,6 +1,6 @@
 package
 {
-	import suite.SuiteChronos;
+	import suite.SuiteAll;
 
 	import org.flexunit.internals.TraceListener;
 	import org.flexunit.runner.FlexUnitCore;
@@ -19,7 +19,7 @@ package
 
 			core = new FlexUnitCore();
 			core.addListener(new TraceListener());
-			core.run(SuiteChronos);
+			core.run(SuiteAll);
 		}
 	}
 }

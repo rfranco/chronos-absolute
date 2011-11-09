@@ -1,0 +1,1 @@
+package chronos.absolute.error{	public class SingletonError extends Error	{		public function SingletonError()		{			super("Instantiation failed: Use instance() instead of new.");		}	}}

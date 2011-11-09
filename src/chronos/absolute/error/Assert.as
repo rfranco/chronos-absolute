@@ -26,9 +26,9 @@ package chronos.absolute.error
 			}
 		}
 
-		public static function notNull(object:*, message:String = null, ... rest):void
+		public static function notNull(instance:*, message:String = null, ... rest):void
 		{
-			if (object == null)
+			if (instance == null)
 			{
 				if (message == null) message = "This argument is required, it must not null.";
 				else message = StringUtil.substitute(message, rest);
@@ -36,9 +36,9 @@ package chronos.absolute.error
 			}
 		}
 
-		public static function instanceOf(object:*, type:Class, message:String = null, ... rest):void
+		public static function instanceOf(instance:*, type:Class, message:String = null, ... rest):void
 		{
-			if (!(object is type))
+			if (!(instance is type))
 			{
 				if (message == null) message = "This argument is not of type '" + type + "'.";
 				else message = StringUtil.substitute(message, rest);

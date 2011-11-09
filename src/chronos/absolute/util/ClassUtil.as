@@ -56,14 +56,15 @@ package chronos.absolute.util
 			return instance;
 		}
 
-		public static function getName(type:Class):String
+		public static function getName(value:*):String
 		{
-			return getQualifiedClassName(type).replace("::", ".");
+			var name:String = getQualifiedClassName(value);
+			return name.replace("::", "."); 
 		}
 
-		public static function getSimpleName(type:Class):String
+		public static function getSimpleName(value:*):String
 		{
-			var name:String = getName(type);
+			var name:String = getName(value);
 			return name.substring(name.lastIndexOf(".") + 1);
 		}
 

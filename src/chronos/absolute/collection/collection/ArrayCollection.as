@@ -96,15 +96,16 @@ package chronos.absolute.collection.collection
 			return true;
 		}
 
+		public function clear():void
+		{
+			_list.length = 0;
+		}
+
 		public function getIterator():IIterator
 		{
 			return new CollectionIterator(this);
 		}
 
-		public function clear():void
-		{
-			_list.length = 0;
-		}
 
 		public function toArray():Array
 		{

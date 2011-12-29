@@ -1,6 +1,6 @@
 package
 {
-	import suite.SuiteAll;
+	import chronos.absolute.error.TestAssert;
 
 	import org.flexunit.internals.TraceListener;
 	import org.flexunit.runner.FlexUnitCore;
@@ -19,7 +19,7 @@ package
 
 			core = new FlexUnitCore();
 			core.addListener(new TraceListener());
-			core.run(SuiteAll);
+			core.run(TestAssert);
 		}
 	}
 }

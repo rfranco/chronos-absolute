@@ -9,7 +9,7 @@ package chronos.absolute.util
 	[RunWith("org.flexunit.runners.Parameterized")]
 	public class TestClassUtil
 	{
-		public static function constructorArgsData():Array
+		public static function get constructorArgsData():Array
 		{
 			var data:Array = [];
 			data.push([]);

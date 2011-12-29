@@ -16,9 +16,9 @@ package chronos.absolute.error
 			}
 		}
 
-		public static function inRange(expression:*, message:String = null, ... rest):void
+		public static function inRange(value:Number, min:Number, max:Number, message:String = null, ... rest):void
 		{
-			if (!expression)
+			if (value < min || value > max)
 			{
 				if (message == null) message = "This argument is outside the acceptable range.";
 				else message = StringUtil.substitute(message, rest);

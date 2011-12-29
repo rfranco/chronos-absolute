@@ -6,7 +6,7 @@ package chronos.absolute.util
 	[RunWith("org.flexunit.runners.Parameterized")]
 	public class TestStringUtil
 	{
-		public static function substituteData():Array
+		public static function get substituteData():Array
 		{
 			var data:Array = [];
 			data.push(["", "", []]);

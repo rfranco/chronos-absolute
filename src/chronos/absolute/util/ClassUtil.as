@@ -59,7 +59,7 @@ package chronos.absolute.util
 		public static function getName(value:*):String
 		{
 			var name:String = getQualifiedClassName(value);
-			return name.replace("::", "."); 
+			return name.replace("::", ".");
 		}
 
 		public static function getSimpleName(value:*):String

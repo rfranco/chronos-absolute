@@ -23,13 +23,19 @@ package chronos.absolute.error
 		[Test]
 		public function inRange():void
 		{
-			Assert.inRange(1 >= 1);
+			Assert.inRange(0.5, 0, 1);
 		}
 
 		[Test(expects="RangeError")]
-		public function inRangeFail():void
+		public function inRangeAfterFail():void
 		{
-			Assert.inRange(1 > 1);
+			Assert.inRange(1.1, 0, 1);
+		}
+		
+		[Test(expects="RangeError")]
+		public function inRangeBeforeFail():void
+		{
+			Assert.inRange(-0.1, 0, 1);
 		}
 
 		[Test]

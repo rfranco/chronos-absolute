@@ -1,12 +1,10 @@
 package
 {
-	import suite.SuiteAll;
+	import flash.display.Sprite;
 
 	import org.flexunit.internals.TraceListener;
 	import org.flexunit.runner.FlexUnitCore;
 	import org.fluint.uiImpersonation.VisualTestEnvironmentBuilder;
-
-	import flash.display.Sprite;
 
 	[SWF(backgroundColor="#FFFFFF", frameRate="30", width="320", height="240")]
 	public class Runner extends Sprite

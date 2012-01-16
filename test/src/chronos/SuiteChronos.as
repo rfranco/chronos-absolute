@@ -1,6 +1,6 @@
-package suite
+package chronos
 {
-	import suite.chronos.SuiteAbsolute;
+	import chronos.absolute.SuiteAbsolute;
 
 	[Suite]
 	[RunWith("org.flexunit.runners.Suite")]

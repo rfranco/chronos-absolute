@@ -1,9 +1,9 @@
-package suite.chronos
+package chronos.absolute
 {
-	import suite.chronos.absolute.SuiteCollection;
-	import suite.chronos.absolute.SuiteCore;
-	import suite.chronos.absolute.SuiteError;
-	import suite.chronos.absolute.SuiteUtil;
+	import chronos.absolute.collection.SuiteCollection;
+	import chronos.absolute.core.SuiteCore;
+	import chronos.absolute.error.SuiteError;
+	import chronos.absolute.util.SuiteUtil;
 
 	[Suite]
 	[RunWith("org.flexunit.runners.Suite")]

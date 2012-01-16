@@ -1,6 +1,5 @@
-package suite.chronos.absolute
+package chronos.absolute.logging
 {
-	import chronos.absolute.logging.TestLogger;
 
 	[Suite]
 	[RunWith("org.flexunit.runners.Suite")]

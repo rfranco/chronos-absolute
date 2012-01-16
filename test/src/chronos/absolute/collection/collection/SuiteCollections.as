@@ -1,6 +1,5 @@
-package suite.chronos.absolute.collection
+package chronos.absolute.collection.collection
 {
-	import chronos.absolute.collection.collection.TestArrayCollection;
 
 	[Suite]
 	[RunWith("org.flexunit.runners.Suite")]

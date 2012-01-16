@@ -1,6 +1,5 @@
-package suite.chronos.absolute
+package chronos.absolute.error
 {
-	import chronos.absolute.error.TestAssert;
 
 	[Suite]
 	[RunWith("org.flexunit.runners.Suite")]

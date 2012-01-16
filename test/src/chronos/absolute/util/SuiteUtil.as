@@ -1,7 +1,5 @@
-package suite.chronos.absolute
+package chronos.absolute.util
 {
-	import chronos.absolute.util.TestClassUtil;
-	import chronos.absolute.util.TestStringUtil;
 
 	[Suite]
 	[RunWith("org.flexunit.runners.Suite")]

@@ -1,9 +1,7 @@
-package suite.chronos.absolute
+package chronos.absolute.core
 {
-	import chronos.absolute.core.TestStringBuilder;
-	import chronos.absolute.core.TestEnum;
+	import chronos.absolute.core.lang.SuiteLang;
 
-	import suite.chronos.absolute.core.SuiteLang;
 
 	[Suite]
 	[RunWith("org.flexunit.runners.Suite")]

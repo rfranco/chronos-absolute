@@ -1,7 +1,5 @@
-package suite.chronos.absolute.core.lang
+package chronos.absolute.core.lang.builder
 {
-	import chronos.absolute.core.lang.builder.TestToStringStyle;
-	import chronos.absolute.core.lang.builder.TestToStringBuilder;
 
 	[Suite]
 	[RunWith("org.flexunit.runners.Suite")]

@@ -1,8 +1,7 @@
-package suite.chronos.absolute.core
+package chronos.absolute.core.lang
 {
-	import suite.chronos.absolute.core.lang.SuiteBuilder;
+	import chronos.absolute.core.lang.builder.SuiteBuilder;
 
-	import chronos.absolute.core.lang.TestDisposable;
 
 	[Suite]
 	[RunWith("org.flexunit.runners.Suite")]

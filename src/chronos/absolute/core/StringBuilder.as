@@ -25,23 +25,40 @@ package chronos.absolute.core
 			return this;
 		}
 
-		public function insert(index:int, value:*):StringBuilder
+		public function insertAt(index:int, value:*):StringBuilder
 		{
 			Assert.inRange(index, 0, _buffer.length);
 			_buffer.splice(index, 0, value);
 			return this;
 		}
 
-		public function remove(index:int):StringBuilder
+		public function insertFirst(value:*):StringBuilder
 		{
-			Assert.inRange(index, 0, _buffer.length);
+			_buffer.unshift(value);
+			return this;
+		}
+
+		public function removeAt(index:int):StringBuilder
+		{
+			Assert.inRange(index, 0, _buffer.length - 1);
 			_buffer.splice(index, 1);
+			return this;
+		}
+
+		public function removeLast():StringBuilder
+		{
+			_buffer.pop();
 			return this;
 		}
 
 		public function build():String
 		{
 			return _buffer.join("");
+		}
+
+		public function get length():int
+		{
+			return _buffer.length;
 		}
 
 		public function toString():String

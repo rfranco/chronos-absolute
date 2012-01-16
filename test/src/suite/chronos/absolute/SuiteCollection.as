@@ -1,5 +1,6 @@
 package suite.chronos.absolute
 {
+	import suite.chronos.absolute.collection.SuiteSet;
 	import suite.chronos.absolute.collection.SuiteCollections;
 	import suite.chronos.absolute.collection.SuiteIterator;
 
@@ -10,5 +11,7 @@ package suite.chronos.absolute
 		public var collection:SuiteCollections;
 
 		public var iterator:SuiteIterator;
+
+		public var set:SuiteSet;
 	}
 }

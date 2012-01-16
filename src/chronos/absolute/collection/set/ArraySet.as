@@ -12,7 +12,12 @@ package chronos.absolute.collection.set
 
 		override public function add(o:*):Boolean
 		{
-			return contains(o) ? super.add(o) : false;
+			var result:Boolean;
+			if (!contains(o))
+			{
+				result = super.add(o);
+			}
+			return result;
 		}
 
 		override public function clone():*

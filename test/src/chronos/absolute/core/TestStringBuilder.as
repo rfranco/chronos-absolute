@@ -41,72 +41,78 @@ package chronos.absolute.core
 		public function appendMutliTimes(result:String, value:*):void
 		{
 			var builder:StringBuilder = new StringBuilder();
-			var resultMutli:String = "";
+			var finalResult:String = "";
 
 			var mutli:int = Math.random() * 5;
 			for (var i:int = 0; i < mutli; i++)
 			{
 				builder.append(value);
-				resultMutli += result;
+				finalResult += result;
 			}
 
-			assertThat(builder.build(), equalTo(resultMutli));
+			assertThat(builder.build(), equalTo(finalResult));
 		}
 
 		[Test(expects="RangeError")]
 		public function insertAfterRange():void
 		{
-			new StringBuilder().insert(1, "");
+			new StringBuilder().insertAt(1, "");
 		}
 
 		[Test(expects="RangeError")]
 		public function insertBeforeRange():void
 		{
-			new StringBuilder().insert(-1, "");
+			new StringBuilder().insertAt(-1, "");
 		}
 
-//		[Test(dataProvider="buildData")]
-//		public function insert(result:String, value:*):void
-//		{
-//			var builder:StringBuilder = new StringBuilder();
-//			var resultMutli:String = "";
-//
-//			var mutli:int = Math.random() * 5;
-//			for (var i:int = 0; i < mutli; i++)
-//			{
-//				builder.append(value);
-//				resultMutli += result;
-//			}
-//
-//			assertThat(builder.build(), equalTo(resultMutli));
-//		}
+		[Test(dataProvider="buildData")]
+		public function insert(result:String, value:*):void
+		{
+			var builder:StringBuilder = new StringBuilder();
+			var finalResult:String = "";
+
+			var times:int = 10;
+			var index:int = Math.random() * times;
+			for (var i:int = 0; i <= times; i++)
+			{
+				builder.append(value);
+				if (index == i) finalResult += "i";
+				finalResult += result;
+			}
+
+			builder.insertAt(index, "i");
+			assertThat(builder.build(), equalTo(finalResult));
+		}
 
 		[Test(expects="RangeError")]
 		public function removeAfterRange():void
 		{
-			new StringBuilder().remove(1);
+			new StringBuilder().removeAt(1);
 		}
 
 		[Test(expects="RangeError")]
 		public function removeBeforeRange():void
 		{
-			new StringBuilder().remove(-1);
+			new StringBuilder().removeAt(-1);
 		}
-		//
-		// [Test(dataProvider="buildData")]
-		// public function remove(result:String, value:*):void
-		// {
-		// var builder:StringBuilder = new StringBuilder();
-		// var resultMutli:String = "";
-		//
-		// var mutli:int = Math.random() * 5;
-		// for (var i:int = 0; i < mutli; i++)
-		// {
-		// builder.append(value);
-		// resultMutli += result;
-		// }
-		//
-		// assertThat(builder.build(), equalTo(resultMutli));
-		// }
+
+		[Test(dataProvider="buildData")]
+		public function remove(result:String, value:*):void
+		{
+			var builder:StringBuilder = new StringBuilder();
+			var finalResult:String = "";
+
+			var times:int = 10;
+			var index:int = Math.random() * times;
+			for (var i:int = 0; i <= times; i++)
+			{
+				if (index == i) builder.append("i");
+				builder.append(value);
+				finalResult += result;
+			}
+			
+			builder.removeAt(index);
+			assertThat(builder.build(), equalTo(finalResult));
+		}
 	}
 }

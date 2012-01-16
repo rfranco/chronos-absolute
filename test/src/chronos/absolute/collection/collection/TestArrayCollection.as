@@ -52,7 +52,8 @@ package chronos.absolute.collection.collection
 			if (values is ICollection) values = ICollection(values).toArray();
 			assertThat(c.toArray(), equalTo(values));
 		}
-
+		
+		[Test]
 		public function dispose():void
 		{
 			var c:ICollection = new ArrayCollection();

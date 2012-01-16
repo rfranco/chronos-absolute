@@ -25,11 +25,6 @@ package chronos.absolute.logging
 			super(name, value);
 			if (EnumRestrictor != enumRestrictor) throw new EnumError();
 		}
-
-		public function toString():String
-		{
-			return "[LogLevel name=" + name + " value=" + value + " ]";
-		}
 	}
 }
 
